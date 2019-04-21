@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Store.master.cs" Inherits="AutoStore.Pages.Store" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>AutoStore</title>
+    <link rel="stylesheet" href="/Content/Styles.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="header">
+            <div class="title">AutoStore - онлайн магазин автомобілів</div>
+        </div>
+        <div id="categories">
+            ...
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="bodyContent" runat="server" />
+        </div>
+    </div>
+    </form>
+</body>
+</html>
