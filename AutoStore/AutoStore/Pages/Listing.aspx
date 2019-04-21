@@ -23,5 +23,14 @@
         <asp:Image ID="Image5" runat="server" ImageUrl="~/Pictures/crafter.jpg" Width="300" Height="240" />
         <asp:Image ID="Image6" runat="server" ImageUrl="~/Pictures/transit.jpg" Width="340" Height="240" />
     </div>
-        
+    <div class="pager">
+        <%
+            for (int i = 1; i <= MaxPage; i++)
+            {
+                Response.Write(
+                    String.Format("<a href='/Pages/Listing.aspx?page={0}' {1}>{2}</a>",
+                        i, i == CurrentPage ? "class='selected'" : "", i));
+            }
+        %>
+    </div>
 </asp:Content>

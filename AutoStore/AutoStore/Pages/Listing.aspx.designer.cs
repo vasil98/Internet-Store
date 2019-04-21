@@ -8,8 +8,7 @@
 //------------------------------------------------------------------------------
 
 namespace AutoStore.Pages {
-    
-    
+       
     public partial class Listing {
         
         /// <summary>
