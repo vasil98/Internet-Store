@@ -19,10 +19,11 @@ namespace AutoStore.Pages
             get
             {
                 int page;
-                return int.TryParse(Request.QueryString["page"], out page) ? page : 1;
+                page = GetPageFromRequest();
+                return page > MaxPage ? MaxPage : page;
             }
         }
-        // Новое свойство, возвращающее наибольший номер допустимой страницы
+
         protected int MaxPage
         {
             get
@@ -30,6 +31,15 @@ namespace AutoStore.Pages
                 return (int)Math.Ceiling((decimal)repository.Autos.Count() / pageSize);
             }
         }
+
+        private int GetPageFromRequest()
+        {
+            int page;
+            string reqValue = (string)RouteData.Values["page"] ??
+                Request.QueryString["page"];
+            return reqValue != null && int.TryParse(reqValue, out page) ? page : 1;
+        }
+
         protected IEnumerable<Auto> GetAutos()
         {
             return repository.Autos
@@ -37,6 +47,7 @@ namespace AutoStore.Pages
                 .Skip((CurrentPage - 1) * pageSize)
                 .Take(pageSize);
         }
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
