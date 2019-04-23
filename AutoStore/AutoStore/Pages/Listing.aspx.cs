@@ -28,7 +28,8 @@ namespace AutoStore.Pages
         {
             get
             {
-                return (int)Math.Ceiling((decimal)repository.Autos.Count() / pageSize);
+                int prodCount = FilterAutos().Count();
+                return (int)Math.Ceiling((decimal)prodCount / pageSize);
             }
         }
 
@@ -42,12 +43,19 @@ namespace AutoStore.Pages
 
         protected IEnumerable<Auto> GetAutos()
         {
-            return repository.Autos
+            return FilterAutos()
                 .OrderBy(g => g.AutoId)
                 .Skip((CurrentPage - 1) * pageSize)
                 .Take(pageSize);
         }
 
+        private IEnumerable<Auto> FilterAutos()
+        {
+            IEnumerable<Auto> autos = repository.Autos;
+            string currentCategory = (string)RouteData.Values["category"] ??
+                Request.QueryString["category"];
+            return currentCategory == null ? autos : autos.Where(p => p.Category == currentCategory);
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {

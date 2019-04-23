@@ -1,9 +1,10 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Store.master.cs" Inherits="AutoStore.Pages.Store" %>
+<%@ Register TagPrefix="GS" TagName="CategoryLinks" Src="~/Controls/CategoryList.ascx" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id1="Head1" runat="server">
     <title>AutoStore</title>
     <link rel="stylesheet" href="/Content/Styles.css" />
 </head>
@@ -14,7 +15,7 @@
             <div class="title">AutoStore - онлайн магазин автомобілів</div>
         </div>
         <div id="categories">
-            ...
+            <GS:CategoryLinks runat="server" />
         </div>
         <div>
             <asp:ContentPlaceHolder ID="bodyContent" runat="server" />
