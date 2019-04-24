@@ -118,3 +118,11 @@ div#categories a.selected:hover
 {
     background-color: #DC143C;
 }
+
+div.item button 
+{
+    color: white;
+    background-color: #DC143C;
+    border: 1px solid black;
+    float: right;
+}
