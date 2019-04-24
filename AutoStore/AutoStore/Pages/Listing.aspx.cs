@@ -41,7 +41,7 @@ namespace AutoStore.Pages
             return reqValue != null && int.TryParse(reqValue, out page) ? page : 1;
         }
 
-        protected IEnumerable<Auto> GetAutos()
+        public IEnumerable<Auto> GetAutos()
         {
             return FilterAutos()
                 .OrderBy(g => g.AutoId)
