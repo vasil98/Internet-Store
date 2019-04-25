@@ -8,14 +8,12 @@ div#header div.title, div.item h3, div.item h4
 {
     font: bold 1em "Arial Narrow", "Franklin Gothic Medium", Arial;
 }
-
 div#header
 {
     background-color: #DC143C;
     border-bottom: 2px solid #000000;
     color: white;
 }
-
 div#header div.title 
 {
     font-size: 2em;
@@ -42,13 +40,11 @@ div.item
     padding-top: .7em;
     margin-bottom: .7em;
 }
-
 div.item:first-child
 {
     border-top: none;
     padding-top: 0;
 }
-
 div.item h3
 {
     font-size: 1.3em;
@@ -56,7 +52,6 @@ div.item h3
     color: #C71585;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 div.item h4
 {
      font-size: 1.1em;
@@ -72,7 +67,6 @@ div.pager
     margin-top: 1em;
     margin-bottom: 1em;
 }
-
 div.pager a
 {
     font-size: 1.1em;
@@ -80,12 +74,10 @@ div.pager a
     text-decoration: none;
     padding: 0 .4em 0 .4em;
 }
-
 div.pager a:hover
 {
     background-color: #FFC0CB;
 }
-
 div.pager a.selected
 {
     background-color: #DC143C;
@@ -102,19 +94,103 @@ div#categories a
     border-bottom: 1px solid black;
     width: 140px;
 }
-
 div#categories a.selected
 {
     background-color: #800080;
     color: White;
 }
-
 div#categories a:hover 
 {
     background-color: #DC143C;
 }
-
 div#categories a.selected:hover 
 {
     background-color: #DC143C;
+}
+
+/*Додати в кошик*/
+div.item button
+{
+    color: white;
+    background-color: #DC143C;
+    border: 1px solid black;
+    float: right;
+    font: .99em Arial;
+}
+
+h2 
+{
+    margin-top: 0.3em
+}
+#cartTable 
+{
+    width: 90%;
+}
+#cartTable tfoot td 
+{
+    border-top: 3px dotted #8B0000;
+    font-weight: bold;
+}
+#cartTable thead th
+{
+    text-align: right;
+}
+#cartTable thead th:first-child
+{
+    text-align: center;
+}
+#cartTable thead th:nth-child(2)
+{
+    text-align: left;
+}
+#cartTable tbody td 
+{
+    text-align: right;
+}
+#cartTable tbody td:first-child 
+{
+    text-align: center;
+}
+#cartTable tbody td:nth-child(2)
+{
+    text-align: left;
+}
+#cartTable tfoot tr td
+{
+    text-align: right;
+}
+p.actionButtons
+{
+    text-align: center;
+}
+
+/*Продовжити покупку*/
+.actionButtons a, button.actionButtons
+{
+    font: .99em Arial;
+    color: White;
+    margin: .5em;
+    text-decoration: none;
+    padding: .15em 1.5em .2em 1.5em;
+    background-color: #DC143C;
+    border: 1px solid black;
+}
+
+div#cartSummary
+{
+    float: right;
+    margin: .8em;
+    color: #FFE4E1;
+    background-color: #C71585;
+    padding: .5em .5em .5em 1em;
+}
+div#cartSummary a
+{
+    text-decoration: none;
+    padding: .4em 1em .4em 1em;
+    line-height: 2.1em;
+    margin-left: .5em;
+    background-color: #800080;
+    color: White;
+    border: 1px solid black;
 }
