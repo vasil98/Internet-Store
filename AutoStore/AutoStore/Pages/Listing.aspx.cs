@@ -1,9 +1,11 @@
 ﻿using AutoStore.Models;
 using AutoStore.Models.Repository;
+using AutoStore.Pages.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Routing;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -59,6 +61,24 @@ namespace AutoStore.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+                int selectedAutoId;
+                if (int.TryParse(Request.Form["add"], out selectedAutoId))
+                {
+                    Auto selectedAuto = repository.Autos
+                        .Where(g => g.AutoId == selectedAutoId).FirstOrDefault();
+
+                    if (selectedAuto != null)
+                    {
+                        SessionHelper.GetCart(Session).AddItem(selectedAuto, 1);
+                        SessionHelper.Set(Session, SessionKey.RETURN_URL, Request.RawUrl);
+
+                        Response.Redirect(RouteTable.Routes 
+                            .GetVirtualPath(null, "cart", null).VirtualPath);
+                    }
+                }
+            }
 
         }
     }
