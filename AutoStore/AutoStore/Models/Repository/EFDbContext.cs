@@ -9,5 +9,6 @@ namespace AutoStore.Models.Repository
     public class EFDbContext : DbContext
     {
         public DbSet<Auto> Autos { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }
