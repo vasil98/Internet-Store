@@ -14,8 +14,9 @@ namespace AutoStore
             routes.MapPageRoute(null, "list/{page}", "~/Pages/Listing.aspx");
             routes.MapPageRoute(null, "", "~/Pages/Listing.aspx");
             routes.MapPageRoute(null, "list", "~/Pages/Listing.aspx");
-
             routes.MapPageRoute("cart", "cart", "~/Pages/CartView.aspx");
+
+            routes.MapPageRoute("checkout", "checkout", "~/Pages/Checkout.aspx");
         }
     }
 }
