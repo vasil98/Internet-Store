@@ -78,6 +78,7 @@
     <Content Include="Controls\CategoryList.ascx" />
     <Content Include="Global.asax" />
     <Content Include="Pages\CartView.aspx" />
+    <Content Include="Pages\Checkout.aspx" />
     <Content Include="Pages\Listing.aspx" />
     <Content Include="Pictures\becha.jpg" />
     <Content Include="Pictures\crafter.jpg" />
@@ -108,8 +109,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904071359256_InitialCreate.cs" />
+    <Compile Include="Migrations\201904071359256_InitialCreate.Designer.cs">
+      <DependentUpon>201904071359256_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905041604494_AddAutosMigration.cs" />
+    <Compile Include="Migrations\201905041604494_AddAutosMigration.Designer.cs">
+      <DependentUpon>201905041604494_AddAutosMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Auto.cs" />
     <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Repository\EFDbContext.cs" />
     <Compile Include="Models\Repository\Repository.cs" />
     <Compile Include="Pages\CartView.aspx.cs">
@@ -118,6 +129,13 @@
     </Compile>
     <Compile Include="Pages\CartView.aspx.designer.cs">
       <DependentUpon>CartView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Helpers\SessionHelper.cs" />
     <Compile Include="Pages\Listing.aspx.cs">
@@ -149,6 +167,14 @@
   <ItemGroup>
     <Folder Include="Pages\Admin\" />
     <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904071359256_InitialCreate.resx">
+      <DependentUpon>201904071359256_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905041604494_AddAutosMigration.resx">
+      <DependentUpon>201905041604494_AddAutosMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
