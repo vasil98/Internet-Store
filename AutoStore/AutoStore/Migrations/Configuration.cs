@@ -10,7 +10,6 @@ namespace AutoStore.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "AutoStore.Models.Repository.EFDbContext";
         }
 
         protected override void Seed(AutoStore.Models.Repository.EFDbContext context)
