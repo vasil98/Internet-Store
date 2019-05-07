@@ -7,13 +7,13 @@ namespace AutoStore.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddAutosMigration : IMigrationMetadata
+    public sealed partial class AddAutoMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddAutosMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddAutoMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201905041604494_AddAutosMigration"; }
+            get { return "201905071828163_AddAutoMigration"; }
         }
         
         string IMigrationMetadata.Source
