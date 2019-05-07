@@ -6,6 +6,7 @@
 <head id1="Head1" runat="server">
     <title>AutoStore</title>
     <link rel="stylesheet" href="/Content/Styles.css" />
+    <%: System.Web.Optimization.Scripts.Render("~/bundles/validation") %>
 </head>
 <body>
     <form id="form1" runat="server">
