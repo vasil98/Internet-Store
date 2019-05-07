@@ -19,18 +19,18 @@
             <h3>Замовник</h3>
             <div>
                 <label for="name">Імя:</label>
-                <input id="name" name="name" runat="server" />
+                <SX:VInput Property="Name" runat="server" />
             </div>
 
             <h3>Адреса доставки</h3>
             <div>
                 <label for="line">Адреса:</label>
-                <input id="line" name="line" runat="server" />
+                <SX:VInput Property="Line" runat="server" />
             </div>
                  
             <div>
                 <label for="city">Місто:</label>
-                <input id="city" name="city" runat="server" />
+                <SX:VInput Property="City" runat="server" />
             </div>
 
             <h3>Деталі замовлення</h3>
