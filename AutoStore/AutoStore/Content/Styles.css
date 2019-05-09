@@ -112,7 +112,7 @@ div#categories a.selected:hover
 div.item button
 {
     color: white;
-    background-color: #DC143C;
+    background-color: #32CD32;
     border: 1px solid black;
     float: right;
     font: .99em Arial;
@@ -165,18 +165,40 @@ p.actionButtons
 }
 
 /*Продовжити покупку*/
-.actionButtons a, button.actionButtons
+.actionButtons a 
 {
     font: .99em Arial;
     color: White;
     margin: .5em;
     text-decoration: none;
     padding: .15em 1.5em .2em 1.5em;
-    background-color: #DC143C;
+    background-color: #32CD32;
+    border: 1px solid black;
+}
+/*Видалити покупку*/
+button.actionButtons 
+{
+    font: .99em Arial;
+    color: White;
+    margin: .5em;
+    text-decoration: none;
+    padding: .15em 1.5em .2em 1.5em;
+    background-color: #B22222;
+    border: 1px solid black;
+}
+/*Обробити замовлення*/
+button.actButtons 
+{
+    font: .99em Arial;
+    color: White;
+    margin: .5em;
+    text-decoration: none;
+    padding: .15em 1.5em .2em 1.5em;
+    background-color: #32CD32;
     border: 1px solid black;
 }
 
-div#cartSummary
+div#cartSummary 
 {
     float: right;
     margin: .8em;
