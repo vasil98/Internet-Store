@@ -37,8 +37,8 @@
             <input type="checkbox" id="giftwrap" name="giftwrap" value="true" />
             Використовувати подарункову упаковку?
         
-        <p class="actionButtons">
-            <button class="actionButtons" type="submit">Обробити замовлення</button>
+        <p class="actButtons">
+            <button class="actButtons" type="submit">Обробити замовлення</button>
         </p>
         </div>
         <div id="checkoutMessage" runat="server">

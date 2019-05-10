@@ -25,7 +25,6 @@ namespace AutoStore.Models.Repository
                 return context.Orders.Include(o => o.OrderLines.Select(ol => ol.Auto));
             }
         }
-
         public void SaveOrder(Order order)
         {
             if (order.OrderId == 0)
@@ -52,5 +51,41 @@ namespace AutoStore.Models.Repository
             }
             context.SaveChanges();
         }
+
+        public void SaveAuto(Auto auto)
+        {
+            if (auto.AutoId == 0)
+            {
+                auto = context.Autos.Add(auto);
+            }
+            else
+            {
+                Auto dbAuto = context.Autos.Find(auto.AutoId);
+                if (dbAuto != null)
+                {
+                    dbAuto.Brand = auto.Brand;
+                    dbAuto.Description = auto.Description;
+                    dbAuto.Price = auto.Price;
+                    dbAuto.Category = auto.Category;
+                }
+            }
+            context.SaveChanges();
+        }
+        public void DeleteAuto(Auto auto)
+        {
+            IEnumerable<Order> orders = context.Orders
+                .Include(o => o.OrderLines.Select(ol => ol.Auto))
+                .Where(o => o.OrderLines
+                    .Count(ol => ol.Auto.AutoId == auto.AutoId) > 0)
+                .ToArray();
+
+            foreach (Order order in orders)
+            {
+                context.Orders.Remove(order);
+            }
+            context.Autos.Remove(auto);
+            context.SaveChanges();
+        }
+
     }
 }
