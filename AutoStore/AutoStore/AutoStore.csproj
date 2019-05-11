@@ -97,6 +97,7 @@
     <Content Include="Pages\CartView.aspx" />
     <Content Include="Pages\Checkout.aspx" />
     <Content Include="Pages\Listing.aspx" />
+    <Content Include="Pages\Login.aspx" />
     <Content Include="Pictures\becha.jpg" />
     <Content Include="Pictures\crafter.jpg" />
     <Content Include="Pictures\cruzak.jpg" />
@@ -193,6 +194,13 @@
     </Compile>
     <Compile Include="Pages\Listing.aspx.designer.cs">
       <DependentUpon>Listing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Store.Master.cs">
       <DependentUpon>Store.Master</DependentUpon>
